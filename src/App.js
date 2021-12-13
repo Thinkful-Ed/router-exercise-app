@@ -1,11 +1,6 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  Switch,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import NoMatch from "./NoMatch";
 
 function Home() {
   return <p>Home</p>;
@@ -27,6 +22,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route>
+            <NoMatch />
           </Route>
         </Switch>
       </div>
