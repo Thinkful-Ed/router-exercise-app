@@ -1,30 +1,36 @@
-# Router Exercise App
+# Backend Deployment Starter Project
 
-This repository contains the starter code for practicing React Router concepts. It provides a foundation for building and navigating between different routes in a React application.
+This repository contains starter code for the Back-End Deployment module. It demonstrates how to deploy a back-end server using databases and migrations.
 
 ## Features
-- Practice exercises for setting up routes and navigation in React
-- Dynamic route handling with React Router
+- Server setup with database connection
+- Knex migrations and seed files for database management
 
 ## Installation
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Thinkful-Ed/router-exercise-app.git
+   git clone https://github.com/Thinkful-Ed/starter-backend-deployment-render.git
    ```
-2. Navigate to the project folder:
+2. Copy the environment variables:
    ```bash
-   cd router-exercise-app
+   cp .env.sample .env
    ```
-3. Install dependencies:
+3. Update the `.env` file with your database connection URL.
+4. Install dependencies:
    ```bash
    npm install
    ```
-4. Start the app:
+5. Run the migrations:
    ```bash
-   npm start
+   npx knex migrate:latest
+   ```
+6. Seed the database:
+   ```bash
+   npx knex seed:run
    ```
 
 ## Technologies
-- **React**: Front-end JavaScript library.
-- **React Router**: Library for handling client-side routing.
+- **Node.js**: JavaScript runtime for building server-side applications.
+- **Express**: Web framework for managing server routes.
+- **Knex.js**: SQL query builder for managing database interactions.
